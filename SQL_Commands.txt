@@ -1,0 +1,32 @@
+INSERT INTO cuisines (name, region)
+VALUES ('Korean', 'Asia');
+
+INSERT INTO cuisines (name, region)
+VALUES ('Japanese', 'Asia');
+
+INSERT INTO cuisines (name, region)
+VALUES ('French', 'Europe');
+
+INSERT INTO cuisines (name, region)
+VALUES ('German', 'Europe');
+
+INSERT INTO cuisines (name, region)
+VALUES ('Italian', 'Mediterranean');
+
+INSERT INTO cuisines (name, region)
+VALUES ('Turkish', 'Mediterranean');
+
+INSERT INTO cuisines (name, region)
+VALUES ('Lebanese', 'Mediterranean');
+
+INSERT INTO cuisines (name, region)
+VALUES ('Ethiopian', 'Africa');
+
+INSERT INTO cuisines (name, region)
+VALUES ('Ghanaian', 'Africa');
+
+INSERT INTO cuisines (name, region)
+VALUES ('Chilean', 'South America');
+
+INSERT INTO cuisines (name, region)
+VALUES ('Argentine', 'South America');
