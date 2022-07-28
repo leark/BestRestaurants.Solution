@@ -1,3 +1,29 @@
 @{
   Layout = "_Layout";
 }
+
+@model BestRestaurants.Models.Cuisine
+
+<h3>Edit</h3>
+
+<h4>Edit this cuisine: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.CuisineId)
+
+  <div class="form-group">
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name, new { required = "required" })
+  </div>
+
+  <div class="form-group">
+    @Html.LabelFor(model => model.Region)
+    @Html.TextBoxFor(model => model.Region, new { required = "required" })
+  </div>
+
+  <input type="submit" value="Save changes" />
+}
+
+<p class="link">@Html.ActionLink("Back to list", "Index")</p>
+<p class="link">@Html.ActionLink("Go to Home", "Index", "Home")</p>
