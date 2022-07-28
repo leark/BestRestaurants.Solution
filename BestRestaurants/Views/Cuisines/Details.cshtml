@@ -1,13 +1,24 @@
 @{
   Layout = "_Layout";
 }
-
+@using BestRestaurants.Models;
 @model BestRestaurants.Models.Cuisine
 
 <h3>Cuisine Details</h3>
 
 <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
 <h4>@Html.DisplayNameFor(model => model.Region): @Html.DisplayFor(model => model.Region)</h4>
+
+@if (ViewBag.Restaurants.Count > 0)
+{
+  <hr />
+  <h4>Restaurants of @Model.Name cuisine.</h4>
+  foreach (Restaurant restaurant in ViewBag.Restaurants)
+  {
+    <p>@Html.ActionLink($"{restaurant.Name}", "Details", "Restaurants", new { id = restaurant.RestaurantId })</p>
+  }
+}
+
 <hr />
 <p class="link">@Html.ActionLink($"Edit {@Model.Name}", "Edit", new { id = Model.CuisineId })</p>
 <p class="link">@Html.ActionLink("Delete this cuisine", "Delete", new { id = Model.CuisineId })</p>

@@ -65,7 +65,7 @@ namespace BestRestaurants.Controllers
       return View(restaurantFound);
     }
 
-    [HttpPost]
+    [HttpPost, ActionName("Delete")]
     public ActionResult Deleted(int id)
     {
       Restaurant restaurantFound = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
